@@ -1,0 +1,43 @@
+#home {
+    background: url(../img/intro-bg.png);
+    background-position: bottom;
+    background-size: cover;
+    height: 85vh;
+    width: 100%;
+}
+
+.circle {
+    padding: 29px 30px;
+    border: 1px solid #1251F3;
+    border-radius: 50%;
+    color: #1251F3;
+}
+
+#prosedur {
+    background: #E0E7FD;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5) inset;
+}
+
+#prosedur .card {
+    overflow: hidden;
+}
+
+#prosedur .card .card-body {
+    padding-left: 90px;
+}
+
+#prosedur .card .card-body .card-body-icon {
+    position: absolute;
+    opacity: .7;
+    font-size: 65px;
+    transform: rotate(15deg);
+    left: -20px;
+}
+
+@media (min-width: 900px){
+    #home {
+        padding-top: 90px;
+    }
+}
