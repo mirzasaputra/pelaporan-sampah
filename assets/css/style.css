@@ -28,6 +28,31 @@
     padding-left: 90px;
 }
 
+#footer {
+    background: #0045FF;
+    color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#footer p {
+    color: #cccccc;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+#footer p:hover {
+    color: #fff;
+    padding-left: 15px;
+    transition: .5s ease-in-out;
+}
+
+.footer {
+    background: #0038D0;
+    padding: 18px;
+    color: #fff;
+}
+
 #prosedur .card .card-body .card-body-icon {
     position: absolute;
     opacity: .7;
