@@ -61,8 +61,43 @@
     left: -20px;
 }
 
+.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    animation: fadeIn .5s ease;
+    -webkit-animation: fadeIn .5s ease;
+}
+
+.nav-item.active a.nav-link {
+    color: #1251F3!important;
+}
+
+@keyframes fadeIn {
+    0% {
+        top: -20%;
+    } 100% {
+        top: 0;
+    }
+}
+
 @media (min-width: 900px){
     #home {
         padding-top: 90px;
     }
+}
+
+.card-home .card {
+    border-left: 3px solid #0045FF;
+    color: rgba(0, 0, 0, .7);
+    font-family: courier new;
+}
+
+.card-home a {
+    text-decoration: none;
 }

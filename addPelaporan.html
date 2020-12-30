@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome - Pelaporan Sampah</title>
+
+    <link rel="short icon" type="image/ico" href="assets/img/logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Mapbox-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css" />
+</head>
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-3">
+        <div class="container">
+            <a href="" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupport"><span class="navbar-toggler-icon"></span></button>
+    
+            <div class="navbar-collapse collapse" id="navbarSupport">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="jadwal-pengambilan" class="nav-link">JADWAL PENGAMBILAN</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="addPelaporan.html" class="nav-link">PELAPORAN</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> Mirza Saputra</a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item"><i class="fas fa-user"></i> Profil <span class="badge badge-danger float-right">2</span></div>
+                            <div class="dropdown-item"><i class="fas fa-cog"></i> Setting <span class="badge badge-danger float-right">5</span></div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item logout"><i class="fas fa-sign-out-alt"></i> Logout</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+
+        <div class="card mb-3 shadow-sm">
+            <div class="card-header">
+                <button class="btn border-primary float-right text-primary" onClick="window.history.back()"><i class="fas fa-arrow-left"></i> Back</button>
+                <h5 class="card-title">Add Pelaporan</h5>
+            </div>
+            <div class="card-body">
+                <form action="" method="post" id="form">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="">ID Pelaporan</label>
+                                <input type="text" placeholder="Auto" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Titik Koordinat</label>
+                                <div class="input-group mb-2">
+                                    <input type="text" placeholder="Titik Koordinat" name="koordinat" value="[0, 0]" class="form-control" readonly>
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-primary" id="check" type="button">Check</button>
+                                    </div>
+                                </div>
+                                <div class="d-block w-100 border" id="map" style="height: 350px"></div>
+                                <pre id="coordinates" style="background: rgba(0, 0, 0, .5);color: #fff;position: absolute;top: 430px;left: 30px;padding: 5px 10px;margin: 0;font-size: 11px;line-height: 18px;border-radius: 3px;display: none;"></pre>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="">Isi Laporan</label>
+                                <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Isi Laporan"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mb-5" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 px-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="assets/img/logo.png" width="100%" alt="">
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Our Location</h5>
+                    <p>Banyuwangi</p>
+                    <p>Surabaya</p>
+                    <p>Jakarta</p>
+                    <p>Palembang</p>
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Quick Link</h5>
+                    <p>About Us</p>
+                    <p>News & Articles</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="col-md-4 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt mr-3"></i> Banyuwangi, Jawa Timur</p>
+                    <p><i class="fas fa-envelope mr-3"></i> SmartTrash@gmail.com</p>
+                    <p><i class="fab fa-instagram mr-3"></i> SmartTrash1</p>
+                    <p><i class="fab fa-youtube mr-3"></i> SmartTrash.inovation</p>
+                    <p><i class="fas fa-phone fa-rotate-90 mr-3"></i> +62 8574 4666 3466</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer text-center">
+        Copyright&copy 2020. All right reserved.
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!--Mapbox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <script>
+        new WOW().init();
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWlyemEyMyIsImEiOiJja2hhZThkdnQxYmg4MnNsMmRmaXQ0czQyIn0.2t2PuQwPwN-GyLDv_pE2Ag';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/navigation-guidance-day-v4',
+            center: [0, 0],
+            zoom: 9
+        });
+
+        $('#check').click(function(){
+            if((navigator.geolocation)){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                swal.fire({
+                    title: 'Warning!!!',
+                    icon: 'question',
+                    text: 'Sorry, Maps not supported'
+                });
+            }
+        })
+
+        function showPosition(position){
+            $('input[name="koordinat"]').val('['+ position.coords.longitude +', '+ position.coords.latitude +']');
+
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/navigation-guidance-night-v4',
+                center: [position.coords.longitude, position.coords.latitude],
+                zoom: 9
+            });
+
+            var coordinates = document.getElementById('coordinates');
+            var canvas = map.getCanvasContainer();
+
+            var geojson = {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [position.coords.longitude, position.coords.latitude]
+                        }
+                    }
+                ]
+            }
+
+            function onMove(e){
+                var coords = e.lngLat;
+
+                canvas.style.cursor = 'grabbing';
+
+                geojson.features[0].geometry.coordinates = [coords.lng, coords.lat];
+                map.getSource('point').setData(geojson);
+            }
+
+            function onUp(e){
+                var coords = e.lngLat;
+
+                coordinates.style.display = 'block';
+                coordinates.innerHTML = 'Longitude: '+coords.lng+' <br>Latitude: '+coords.lat;
+                canvas.style.cursor = '';
+
+                $('input[name="koordinat"]').val('['+coords.lng+', '+coords.lat+']');
+
+                map.off('mousemove', onMove);
+                map.off('touchmove', onMove);
+            }
+
+            map.on('load', function(){
+                map.addSource('point', {
+                    'type': 'geojson',
+                    'data': geojson
+                });
+
+                map.addLayer({
+                    'id': 'point',
+                    'type': 'circle',
+                    'source': 'point',
+                    'paint': {
+                        'circle-radius': 8,
+                        'circle-color': '#c02626'
+                    }
+                })
+
+                map.on('mouseenter', 'point', function(){
+                    map.setPaintProperty('point', 'circle-color', '#c02626');
+                    canvas.style.cursor = 'move';
+                })
+
+                map.on('mouseleave', 'point', function(){
+                    map.setPaintProperty('point', 'circle-color', '#c02626');
+                    canvas.style.cursor = '';
+                })
+
+                map.on('mousedown', 'point', function(e){
+                    e.preventDefault();
+
+                    canvas.style.cursor = 'grab';
+
+                    map.on('mousemove', onMove);
+                    map.once('mouseup', onUp);
+                })
+
+                map.on('touchstart', 'point', function(e){
+                    if(e.points.length !== 1) return;
+
+                    e.preventDefault();
+
+                    map.on('touchmove', onMove);
+                    map.once('touchend', onUp);
+                })
+            })
+
+            var nav = new mapboxgl.NavigationControl({
+                showZoom: true,
+                showCompass: true,
+                visualizePitch: true
+            });
+            map.addControl(nav, 'top-right');
+        }
+
+        $('#form').submit(function(e){
+            e.preventDefault();
+            swal.fire({
+                title: 'Success',
+                icon: 'success',
+                text: 'Laporan anda sedang diproses...'
+            }).then(function(){
+                window.history.back();
+            })
+        })
+    </script>
+</body>
+</html>

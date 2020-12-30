@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome - Pelaporan Sampah</title>
+
+    <link rel="short icon" type="image/ico" href="assets/img/logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--Mapbox-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+
+            <a href="" class="navbar-brand"><img src="assets/img/logo.png" class="w-100" alt=""></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupport">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse" id="navbarSupport">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active home">
+                        <a href="" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item about">
+                        <a href="" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item prosedur">
+                        <a href="" class="nav-link">PROSEDURE</a>
+                    </li>
+                    <li class="nav-item contact">
+                        <a href="" class="nav-link">CONTACT ME</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+
+        <div class="col-md-8 col-12 mx-auto mt-4">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header">
+                    <button class="btn border-primary float-right text-primary" onClick="window.history.back()"><i class="fas fa-arrow-left"></i> Back</button>
+                    <h5 class="card-title">Add Pelaporan</h5>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post" id="form">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Nama</label>
+                                    <input type="text" placeholder="Nama" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Dusun</label>
+                                    <input type="text" placeholder="Dusun" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <label for="">Rt</label>
+                                            <input type="text" placeholder="Rt" class="form-control">
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <label for="">Rw</label>
+                                            <input type="text" placeholder="Rw" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Username</label>
+                                    <input type="text" placeholder="Username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <input type="text" placeholder="Password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Confirm Password</label>
+                                    <input type="text" placeholder="Confirm Password" class="form-control">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <button class="btn btn-danger mb-5" onclick="window.history.back()" type="button">Cancel</button>
+                        <button class="btn btn-primary mb-5" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 px-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="assets/img/logo.png" width="100%" alt="">
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Our Location</h5>
+                    <p>Banyuwangi</p>
+                    <p>Surabaya</p>
+                    <p>Jakarta</p>
+                    <p>Palembang</p>
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Quick Link</h5>
+                    <p>About Us</p>
+                    <p>News & Articles</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="col-md-4 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt mr-3"></i> Banyuwangi, Jawa Timur</p>
+                    <p><i class="fas fa-envelope mr-3"></i> SmartTrash@gmail.com</p>
+                    <p><i class="fab fa-instagram mr-3"></i> SmartTrash1</p>
+                    <p><i class="fab fa-youtube mr-3"></i> SmartTrash.inovation</p>
+                    <p><i class="fas fa-phone fa-rotate-90 mr-3"></i> +62 8574 4666 3466</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer text-center">
+        Copyright&copy 2020. All right reserved.
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!--Mapbox-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <script>
+        new WOW().init();
+
+        $('#form').submit(function(e){
+            e.preventDefault();
+            swal.fire({
+                title: 'Success',
+                icon: 'success',
+                text: 'Success. Silahkan login menggukanan akun anda'
+            }).then(function(){
+                window.history.back();
+            })
+        })
+    </script>
+</body>
+</html>

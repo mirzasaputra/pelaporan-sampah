@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome - Pelaporan Sampah</title>
+
+    <link rel="short icon" type="image/ico" href="assets/img/logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-3">
+        <div class="container">
+            <a href="" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupport"><span class="navbar-toggler-icon"></span></button>
+    
+            <div class="navbar-collapse collapse" id="navbarSupport">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="jadwal-pengambilan.html" class="nav-link">JADWAL PENGAMBILAN</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="addPelaporan.html" class="nav-link">PELAPORAN</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> Mirza Saputra</a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item"><i class="fas fa-user"></i> Profil <span class="badge badge-danger float-right">2</span></div>
+                            <div class="dropdown-item"><i class="fas fa-cog"></i> Setting <span class="badge badge-danger float-right">5</span></div>
+                            <div class="dropdown-divider"></div>
+                            <div class="dropdown-item logout"><i class="fas fa-sign-out-alt"></i> Logout</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="homt.html">Home</a></li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+
+        <!--Daftar Pelaporan-->
+        <div class="card mb-3 shadow-sm wow fadeInUp" data-wow-delay="0.4s">
+            <div class="card-header">
+                <h5 class="card-title">Data Pelaporan Pending</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="1%">No.</th>
+                            <th>Tanggal</th>
+                            <th>Keterangan</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2020-12-03</td>
+                            <td>Sampah Sudah Penuh</td>
+                            <td class="text-center"><i class="fas fa-pencil-alt text-primary px-3"></i> <i class="fas fa-trash-alt text-danger px-3"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2020-12-04</td>
+                            <td>-</td>
+                            <td class="text-center"><i class="fas fa-pencil-alt text-primary px-3"></i> <i class="fas fa-trash-alt text-danger px-3"></i></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2020-12-05</td>
+                            <td>-</td>
+                            <td class="text-center"><i class="fas fa-pencil-alt text-primary px-3"></i> <i class="fas fa-trash-alt text-danger px-3"></i></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2020-12-06</td>
+                            <td>-</td>
+                            <td class="text-center"><i class="fas fa-pencil-alt text-primary px-3"></i> <i class="fas fa-trash-alt text-danger px-3"></i></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2020-12-07</td>
+                            <td>-</td>
+                            <td class="text-center"><i class="fas fa-pencil-alt text-primary px-3"></i> <i class="fas fa-trash-alt text-danger px-3"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 px-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <img src="assets/img/logo.png" width="100%" alt="">
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Our Location</h5>
+                    <p>Banyuwangi</p>
+                    <p>Surabaya</p>
+                    <p>Jakarta</p>
+                    <p>Palembang</p>
+                </div>
+                <div class="col-md-2 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Quick Link</h5>
+                    <p>About Us</p>
+                    <p>News & Articles</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="col-md-4 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt mr-3"></i> Banyuwangi, Jawa Timur</p>
+                    <p><i class="fas fa-envelope mr-3"></i> SmartTrash@gmail.com</p>
+                    <p><i class="fab fa-instagram mr-3"></i> SmartTrash1</p>
+                    <p><i class="fab fa-youtube mr-3"></i> SmartTrash.inovation</p>
+                    <p><i class="fas fa-phone fa-rotate-90 mr-3"></i> +62 8574 4666 3466</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer text-center">
+        Copyright&copy 2020. All right reserved.
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
