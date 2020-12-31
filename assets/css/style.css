@@ -101,3 +101,26 @@
 .card-home a {
     text-decoration: none;
 }
+
+.pre-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 99999999;
+}
+
+.loader-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: 
+}

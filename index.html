@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="pre-loader" id="loader">
+        <div class="loader-content">
+            <img src="assets/img/loader.gif" class="w-100" alt="">
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
 
@@ -282,6 +288,120 @@
     <script src="assets/js/custom.js"></script>
     <script>
         new WOW().init();
+
+        if($(window).scrollTop() > 60){
+            $('.navbar').addClass('navbar-fixed');
+        } else {
+            $('.navbar').removeClass('navbar-fixed');
+        }
+
+        if($(window).scrollTop() < $('#about').offset().top){
+            $('.home').addClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').removeClass('active');
+        }
+
+        if($(window).scrollTop() > $('#about').offset().top - 250){
+            $('.home').removeClass('active');
+            $('.about').addClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').removeClass('active');
+        }
+
+        if($(window).scrollTop() > $('#prosedur').offset().top - 250){
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').addClass('active');
+            $('.contact').removeClass('active');
+        }
+
+        if($(window).scrollTop() > $('#contact').offset().top - 250){
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').addClass('active');
+        }
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 60){
+                $('.navbar').addClass('navbar-fixed');
+            } else {
+                $('.navbar').removeClass('navbar-fixed');
+            }
+
+            if($(window).scrollTop() < $('#about').offset().top){
+                $('.home').addClass('active');
+                $('.about').removeClass('active');
+                $('.prosedur').removeClass('active');
+                $('.contact').removeClass('active');
+            }
+
+            if($(window).scrollTop() > $('#about').offset().top - 250){
+                $('.home').removeClass('active');
+                $('.about').addClass('active');
+                $('.prosedur').removeClass('active');
+                $('.contact').removeClass('active');
+            }
+
+            if($(window).scrollTop() > $('#prosedur').offset().top - 250){
+                $('.home').removeClass('active');
+                $('.about').removeClass('active');
+                $('.prosedur').addClass('active');
+                $('.contact').removeClass('active');
+            }
+
+            if($(window).scrollTop() > $('#contact').offset().top - 250){
+                $('.home').removeClass('active');
+                $('.about').removeClass('active');
+                $('.prosedur').removeClass('active');
+                $('.contact').addClass('active');
+            }
+        })
+
+        $('.home').click(function(e){
+            e.preventDefault()
+            $('.home').addClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $('#home').offset().top
+            }, 500)
+        })
+
+        $('.about').click(function(e){
+            e.preventDefault()
+            $('.home').removeClass('active');
+            $('.about').addClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $('#about').offset().top - 150
+            }, 500)
+        })
+
+        $('.prosedur').click(function(e){
+            e.preventDefault()
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').addClass('active');
+            $('.contact').removeClass('active');
+            $('html, body').animate({
+                scrollTop: $('#prosedur').offset().top - 150
+            }, 500)
+        })
+
+        $('.contact').click(function(e){
+            e.preventDefault()
+            $('.home').removeClass('active');
+            $('.about').removeClass('active');
+            $('.prosedur').removeClass('active');
+            $('.contact').addClass('active');
+            $('html, body').animate({
+                scrollTop: $('#contact').offset().top - 150
+            }, 500)
+        })
     </script>
 </body>
 </html>

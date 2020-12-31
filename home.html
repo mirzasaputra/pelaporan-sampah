@@ -11,9 +11,21 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--DataTable-->
+    <link rel="stylesheet" href="assets/plugins/datatables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/plugins/datatables/responsive.bootstrap4.min.css">
+
+    <!--Style-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="pre-loader">
+        <div class="loader-content">
+            <img src="assets/img/loader.gif" class="w-100" alt="">
+        </div>
+    </div>
+
     <div class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-3">
         <div class="container">
             <a href="" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
@@ -190,7 +202,7 @@
                 <h5 class="card-title">Data Pelaporan</h5>
             </div>
             <div class="card-body">
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%">
                     <thead>
                         <tr>
                             <th width="1%">No.</th>
@@ -234,6 +246,15 @@
                 </table>
             </div>
         </div>
+
+        <div class="card mb-3 shadow-sm wow fadeInUp" data-wow-delay="0.5s">
+            <div class="card-header">
+                <h5 class="card-title">Grafik Pelaporan</h5>
+            </div>
+            <div class="card-body">
+                <canvas class="w-100" id="chart"></canvas>
+            </div>
+        </div>
     </div>
 
     <div id="footer">
@@ -275,9 +296,45 @@
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/sweetalert2.min.js"></script>
+
+    <!--DataTable-->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    <!-- Chart -->
+    <script src="assets/plugins/chart.js/chart-bundle.min.js"></script>
+    <script src="assets/plugins/chart.js/chart.min.js"></script>
+
+    <!--Custom-->
     <script src="assets/js/custom.js"></script>
     <script>
         new WOW().init();
+
+        $('#dataTable').DataTable();
+
+        $(window).on('load', function(){
+            $('.pre-loader').hide();
+        })
+
+        var canvas = document.getElementById('chart');
+        var ctx = canvas.getContext('2d');
+
+        var Chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["2020-12-03", "2020-12-04", "2020-12-05", "2020-12-06", "2020-12-07"],
+                datasets: [
+                    {
+                        label: 2020,
+                        data: [5, 8, 7, 2, 3],
+                        backgroundColor: '#1252f34b',
+                        borderColor: '#1251F3b'
+                    }
+                ]
+            }
+        })
     </script>
 </body>
 </html>
